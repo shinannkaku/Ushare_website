@@ -1,0 +1,64 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #FFF9D9;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #FFF9D9;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+}
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #F4A700;
+}
+.search-bar {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 10px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 5px;
+    font-size: 16px;
+}
+.search-bar button {
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.nav-links a {
+    text-decoration: none;
+    margin: 0 10px;
+    color: black;
+    font-size: 16px;
+}
+.sell-btn {
+    background: #FFD700;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+.nav-icons a {
+    margin-left: 10px;
+}
+.nav-icons img {
+    width: 20px;
+    height: 20px;
+}
