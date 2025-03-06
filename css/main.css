@@ -10,7 +10,7 @@ html,body,#main {
     justify-content: space-between;
     background-color: white;
     padding: 10px 15px;
-    border-radius: 30px;
+    border-radius: 50px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
 }
@@ -80,6 +80,7 @@ html,body,#main {
 .nav-links a:hover {
     color: #F5A623;
 }
+
 .sell-btn-container {
     display: flex;
     flex-direction: column;
@@ -119,6 +120,7 @@ html,body,#main {
     text-decoration: none;
     color: black;
 }
+
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;
@@ -140,18 +142,17 @@ html,body,#main {
 
 }
 
-h1{
+.row {
+    border: none;
+    padding: 20px;
+}
+h5{
     text-align: center;
     margin: 50px 0 25px 0;
 }
-.right{
-    float:right; 
-}
-.left{
-    float: left;
-}
-.card{
-    border: none;
+.card {
+    border: 0px solid transparent !important;
+    box-shadow: none !important;
     padding: 20px;
     margin-bottom: 20px;
 }
@@ -161,6 +162,13 @@ h1{
 .card img:hover{
     opacity: 0.7;
 }
+.right{
+    float:right; 
+}
+.left{
+    float: left;
+}
+
 input,select{
     height: 3em;
 }
