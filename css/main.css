@@ -135,3 +135,40 @@ html,body,#main {
         padding: 10px 20px;
     }
 }
+.container-fluid{
+    margin: 50px;
+
+}
+
+h1{
+    text-align: center;
+    margin: 50px 0 25px 0;
+}
+.right{
+    float:right; 
+}
+.left{
+    float: left;
+}
+.card{
+    border: none;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+.card img{
+    border-radius: 5px;
+}
+.card img:hover{
+    opacity: 0.7;
+}
+input,select{
+    height: 3em;
+}
+button{
+    width:8em;
+    height: 3em;
+}
+footer{
+    background-color: #000;
+    color: #fff;
+}
