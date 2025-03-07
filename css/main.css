@@ -169,6 +169,16 @@ h5{
     float: left;
 }
 
+.products-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  
+  .product {
+    margin-right: 20px;
+  }
+
 input,select{
     height: 3em;
 }
