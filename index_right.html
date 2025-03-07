@@ -76,48 +76,86 @@
 
       <section class="container-fluid">
         <h5>二手商品區</h5>
-        <div class="products-container">
-            <div class="product">
-              <img src="product1.jpg" alt="Product 1">
-              <h2>Product 1</h2>
-              <p>Price: $10</p>
-            </div>
-            <div class="product">
-              <img src="product2.jpg" alt="Product 2">
-              <h2>Product 2</h2>
-              <p>Price: $20</p>
-            </div>
-            <div class="product">
-              <img src="product3.jpg" alt="Product 3">
-              <h2>Product 3</h2>
-              <p>Price: $30</p>
+
+        <div class="product-card">
+            <!-- 標題和價格 -->
+            <div class="card-header">
+              <h3 class="product-title">
+                <span class="shamrock-icon">☘</span>
+                二手衣架
+              </h3>
+              <span class="product-price">NT$50</span>
+            </div>           
+            <!-- 產品描述 -->
+            <div class="product-description">
+              環保衣架低價出~
+              <span class="vegan-dot"></span>
+            </div>            
+            <!-- 產品圖片 -->
+            <div class="product-image-container">
+              <img src="src/assets/images/img-01.jpg" alt="二手衣架" class="product-image">
             </div>
           </div>
-
-        <div class="row">
-            <div class="card col-6 col-md-4 col-xl-3"  style="width:10rem">
-                <img src="src/assets/images/img-01.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-sm-center">《資料庫與開發實作</h5>
-                  <p class="card-text text-sm-center">實用的書籍</p>
-                  <p class="card-text text-sm-center">#二手書籍 #世新大學</p>
-                  <span class="left">NT$250</span>
-                  <span type="button" class="right btn-outline-warning">🛒</span>
-                </div>
-              </div>      
         </div>
-
-        <div class="row">
-            <div class="card col-6 col-md-4 col-xl-3"  style="width:10rem">
-                <img src="src/assets/images/img-01.jpg" class="card-img-top" alt="...">
-                <div class="card-body">
-                  <h5 class="card-title text-sm-center">《資料庫與開發實作</h5>
-                  <p class="card-text text-sm-center">實用的書籍</p>
-                  <p class="card-text text-sm-center">#二手書籍 #世新大學</p>
-                  <span class="left">NT$250</span>
-                  <span type="button" class="right btn-outline-warning">🛒</span>
-                </div>
-              </div>      
+        <div class="product-card">
+            <!-- 標題和價格 -->
+            <div class="card-header">
+              <h3 class="product-title">
+                <span class="shamrock-icon">☘</span>
+                二手衣架
+              </h3>
+              <span class="product-price">NT$50</span>
+            </div>           
+            <!-- 產品描述 -->
+            <div class="product-description">
+              環保衣架低價出~
+              <span class="vegan-dot"></span>
+            </div>            
+            <!-- 產品圖片 -->
+            <div class="product-image-container">
+              <img src="src/assets/images/img-01.jpg" alt="二手衣架" class="product-image">
+            </div>
+          </div>
+        </div>        
+        <div class="product-card">
+            <!-- 標題和價格 -->
+            <div class="card-header">
+              <h3 class="product-title">
+                <span class="shamrock-icon">☘</span>
+                二手衣架
+              </h3>
+              <span class="product-price">NT$50</span>
+            </div>           
+            <!-- 產品描述 -->
+            <div class="product-description">
+              環保衣架低價出~
+              <span class="vegan-dot"></span>
+            </div>            
+            <!-- 產品圖片 -->
+            <div class="product-image-container">
+              <img src="src/assets/images/img-01.jpg" alt="二手衣架" class="product-image">
+            </div>
+          </div>
+        </div>        
+        <div class="product-card">
+            <!-- 標題和價格 -->
+            <div class="card-header">
+              <h3 class="product-title">
+                <span class="shamrock-icon">☘</span>
+                二手衣架
+              </h3>
+              <span class="product-price">NT$50</span>
+            </div>           
+            <!-- 產品描述 -->
+            <div class="product-description">
+              環保衣架低價出~
+              <span class="vegan-dot"></span>
+            </div>            
+            <!-- 產品圖片 -->
+            <div class="product-image-container">
+              <img src="src/assets/images/img-01.jpg" alt="二手衣架" class="product-image">
+            </div>
+          </div>
         </div>
 
         <nav aria-label="Page navigation">
@@ -140,6 +178,56 @@
         gsap.from(".logo", { y: -50, opacity: 0, duration: 1, ease: "bounce.out" });
         gsap.from(".nav-center", { scale: 0.5, opacity: 0, duration: 1, delay: 0.5 });
         gsap.from(".sell-btn", { x: 50, opacity: 0, duration: 1, delay: 1});
+
+        // 動態從後端載入多個產品的範例
+    document.addEventListener('DOMContentLoaded', function() {
+      // 假設這是從後端API獲取的產品數據
+      const products = [
+        {
+          id: 1,
+          name: 'The Classic Manchego',
+          price: '11 $',
+          description: '100% Vegan meat and dairy substitute products',
+          imageUrl: 'product1.jpg'
+        },
+        {
+          id: 2,
+          name: 'Vegan Cheddar',
+          price: '9 $',
+          description: '100% Vegan dairy alternative with authentic taste',
+          imageUrl: 'product2.jpg'
+        }
+        // 可以添加更多產品
+      ];
+      
+      // 獲取容器元素
+      const container = document.querySelector('.container');
+      container.innerHTML = ''; // 清空容器
+      
+      // 為每個產品創建卡片
+      products.forEach(product => {
+        const productCard = `
+          <div class="product-card mb-4">
+            <div class="card-header">
+              <h3 class="product-title">
+                <span class="shamrock-icon">☘</span>
+                ${product.name}
+              </h3>
+              <span class="product-price">${product.price}</span>
+            </div>
+            <div class="product-description">
+              ${product.description}
+              <span class="vegan-dot"></span>
+            </div>
+            <div class="product-image-container">
+              <img src="${product.imageUrl}" alt="${product.name}" class="product-image">
+            </div>
+          </div>
+        `;
+        
+        container.innerHTML += productCard;
+      });
+    });
     </script>
 </body>
 

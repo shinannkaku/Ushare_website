@@ -142,42 +142,88 @@ html,body,#main {
 
 }
 
-.row {
-    border: none;
-    padding: 20px;
-}
-h5{
-    text-align: center;
-    margin: 50px 0 25px 0;
-}
-.card {
-    border: 0px solid transparent !important;
-    box-shadow: none !important;
-    padding: 20px;
-    margin-bottom: 20px;
-}
-.card img{
-    border-radius: 5px;
-}
-.card img:hover{
-    opacity: 0.7;
-}
-.right{
-    float:right; 
-}
-.left{
-    float: left;
-}
-
-.products-container {
+.product-card {
+    max-width: 400px;
+    margin: 20px auto;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  
+  .card-header {
     display: flex;
-    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .product-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0;
+  }
+  
+  .product-price {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  .product-description {
+    padding: 8px 15px;
+    background-color: white;
+    font-size: 14px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+  
+  .vegan-dot {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 5px;
+  }
+  
+  .shamrock-icon {
+    color: green;
+    margin-right: 5px;
+  }
+  
+  .product-image-container {
+    padding: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .product-image {
+    width: 100%;
+    display: block;
+  }
+
+  .product-cards {
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
   }
   
-  .product {
-    margin-right: 20px;
+  .product-card {
+    margin: 20px;
+    width: 25%;
   }
+  
+  @media (max-width: 768px) {
+    .product-card {
+      width: 50%;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .product-card {
+      width: 100%;
+    }
+  }
+
 
 input,select{
     height: 3em;
